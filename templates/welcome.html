@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='welcome.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='3.jpg') }}");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="left">
+            <button onclick="scrollToSection('home')">Home</button>
+            <button onclick="scrollToSection('uploads')">Uploads</button>
+            <button onclick="scrollToSection('about')">About</button>
+        </div>
+        <div class="center">
+            <h3>Welcome, {{ name }}</h3>
+        </div>
+        <div class="right">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+        <!-- Sections for Home, Uploads, and About -->
+        <div id="home" class="main">
+            <!-- Content for the "Home" section -->
+            <h3>                  </h3>
+            <h2>Hepatic Hemangioma (Benign)</h2>
+            <p>Hepatic hemangioma, also known as liver hemangioma, is a benign (non-cancerous) tumor made up of clusters of blood vessels in the liver. These tumors are typically congenital, meaning they are present at birth, and often remain small and asymptomatic throughout life. However, they can grow larger over time and may cause symptoms or complications in some cases.</p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>Small hepatic hemangiomas often do not cause any symptoms and may be discovered incidentally during medical imaging tests for other conditions.</li>
+                <li>Large hepatic hemangiomas may cause symptoms such as abdominal pain, discomfort, or a feeling of fullness due to the pressure exerted on surrounding organs.</li>
+            </ul>
+            <h3>Diagnosis:</h3>
+            <ul>
+                <li>Hepatic hemangiomas are usually diagnosed through imaging tests such as ultrasound, CT scan, or MRI.</li>
+                <li>A biopsy may be performed to confirm the diagnosis if the imaging results are inconclusive.</li>
+            </ul>
+            <img src="{{ url_for('static', filename='liver-hemangioma.jpg') }}" alt="Our team" class="team-image"> 
+            <h3>Treatment:</h3>
+            <ul>
+                <li>In many cases, small hepatic hemangiomas do not require treatment and can be monitored over time.</li>
+                <li>Treatment may be necessary if the hemangioma causes symptoms or complications such as rupture, bleeding, or obstruction of nearby structures.</li>
+                <li>Treatment options may include surgery, embolization (blocking the blood supply to the tumor), or radiofrequency ablation (destroying the tumor with heat).</li>
+            </ul>
+            
+            <h2>Cholangiocarcinoma (Malignant)</h2>
+            <p>Cholangiocarcinoma, also known as bile duct cancer, is a malignant (cancerous) tumor that develops in the bile ducts within the liver. It can occur in any part of the bile ducts, including the intrahepatic (within the liver), perihilar (near the liver), or distal (outside the liver) regions. Cholangiocarcinoma is relatively rare but can be aggressive and difficult to treat, especially if diagnosed at an advanced stage.</p>
+            <h3>Symptoms:</h3>
+            <ul>
+                <li>Cholangiocarcinoma may cause symptoms such as jaundice (yellowing of the skin and eyes), abdominal pain, unexplained weight loss, fatigue, itching, and dark urine.</li>
+                <li>In some cases, cholangiocarcinoma may be asymptomatic and discovered incidentally during medical imaging tests or screening for other conditions.</li>
+            </ul>
+            <h3>Diagnosis:</h3>
+            <ul>
+                <li>Diagnosis of cholangiocarcinoma may involve imaging tests such as ultrasound, CT scan, MRI, or endoscopic retrograde cholangiopancreatography (ERCP).</li>
+                <li>A biopsy may be performed to confirm the diagnosis by examining a sample of tissue from the bile ducts.</li>
+            </ul>
+            <img src="{{ url_for('static', filename='Liver Label.png') }}" alt="Our team" class="team-image2">
+            <h3>Treatment:</h3>
+            <ul>
+                <li>Treatment options for cholangiocarcinoma depend on the location, stage, and extent of the cancer, as well as the overall health of the patient.</li>
+                <li>Treatment may include surgery to remove the tumor, chemotherapy, radiation therapy, targeted therapy, or a combination of these approaches.</li>
+                <li>Liver transplantation may be considered in select cases, particularly for early-stage cholangiocarcinoma confined to the liver and not amenable to surgical resection.</li>
+            </ul>
+            
+            <h2>Conclusion</h2>
+            <p>Hepatic hemangioma and cholangiocarcinoma are two distinct liver diseases with different characteristics, causes, and treatment approaches. While hepatic hemangiomas are usually benign tumors that may not require treatment unless they cause symptoms, cholangiocarcinoma is a malignant cancer that requires prompt medical attention and may necessitate aggressive treatment measures. Early detection, accurate diagnosis, and timely intervention are crucial for managing both conditions effectively and improving patient outcomes.</p>
+
+            <!-- Liver Disease Classification System Instruction Manual -->
+            <h2>Liver Disease Classification System Instruction Manual</h2>
+            <p>Welcome to the Liver Disease Classification System! This instruction manual will guide you through the process of using our website to classify liver diseases based on CT images.</p>
+
+            <h2>1. Upload CT Image</h2>
+            <p>After logging in, you'll be directed to the main dashboard. Here, you can upload your CT image for liver disease classification. Follow these steps:</p>
+            <ul>
+                <li>Click on the "Upload" button to open the file upload interface.</li>
+                <li>Choose the CT image file from your device's storage by clicking on the "Choose File" button.</li>
+                <li>Once selected, click "Upload" to upload the CT image to the system.</li>
+            </ul>
+            <h2>2. Predict the Result</h2>
+            <p>After uploading the CT image, you can initiate the liver disease classification process to predict the result. Follow these steps:</p>
+            <ul>
+                <li>Click on the "Predict" button to start the classification process.</li>
+                <li>Wait for the system to analyze the uploaded CT image and generate the classification result.</li>
+                <li>Once the classification is complete, the predicted result will be displayed on the screen.</li>
+            </ul>
+            <h2>3. Log Out</h2>
+            <p>After your interaction with the website is complete , you can logout your account by clicking the logout button on the top right corner of your screen.</p>
+
+            <h3>Additional Tips:</h3>
+            <ul>
+                <li>Ensure that the uploaded CT image is of good quality and clearly shows the liver area for accurate classification.</li>
+                <li>If you encounter any issues or have questions about the classification process, you can contact our support team for assistance.</li>
+                <li>Make sure to log out of your account after completing your session to maintain account security.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>With the Liver Disease Classification System, you can efficiently classify liver diseases based on CT images, helping healthcare professionals make informed decisions about patient care. Thank you for choosing our platform, and we hope you find it valuable in your diagnostic endeavors.</p>
+            <p>If you have any further questions or need assistance, feel free to reach out to our support team.</p>
+        </div>
+        <!-- <div id="uploads" class="main"> -->
+            <!-- Content for the "Uploads" section -->
+            <!-- Content -->
+            <!-- Add the following code for image uploading -->
+            <!-- <div class="upload-section">
+                <h1>Image Upload</h2>
+                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <input id="image-upload" type="file" name="file" >
+                    <input type="submit" value="Upload" class="upload-button">
+                    <h2>Prediction Results</h1>
+                    <p>The predicted class is: {{ prediction}}</p> -->
+                    <!-- Display uploaded image -->
+                    <!-- {% if img_path %}
+                    <img src="{{ img_path }}" alt="Uploaded Image" class="uploaded-image" >
+                    {% endif %}
+                    {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                </form>
+            </div>
+        </div> -->
+      
+        <div id="uploads" class="main"> 
+            <!-- Content for the "Uploads" section -->
+            <!-- Content -->
+            <!-- Add the following code for image uploading -->
+            <div class="upload-section">
+                <h1>Image Upload</h1>
+                <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                    <input id="image-upload" type="file" name="file" >
+                    <input type="submit" value="Upload" class="upload-button">
+                </form>
+                <h2>Prediction Results</h2>
+                <p>The predicted class is: {{ prediction}}</p> 
+                <!-- Display uploaded image -->
+                {% if img_path %}
+                <img src="{{ img_path }}" alt="Uploaded Image" class="uploaded-image" >
+                {% endif %}
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message[1] }}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %} 
+            </div>
+        </div> 
+       
+        <div id="about" class="main">
+            <!-- Content for the "About" section -->
+            <h2 style="text-align: center;"> Developed By</h2>
+            <div class="card-container">
+                <!--  card for Developers  -->
+                <div class="card">
+                    <img src="{{ url_for('static', filename='user.png') }}" alt="Developer1">
+                    <h3>Sarathy Chunduru</h3>
+                    <a href="https://github.com/sarathy31" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sarathy-chunduru-a17558246/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sarathycvsp@gmail.com" class="card-email"> <i class="fas fa-envelope"></i> </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='user.png') }}" alt="Developer2">
+                    <h3> Venkat Naga Sai Chilakabathina</h3>
+                    <a href="https://github.com/Vnsai0827" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/venkata-nagasai-249223180/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:vnsai.0827@gmail.com" class="card-email"> <i class="fas fa-envelope"></i> </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='user.png') }}" alt="Developer3">
+                    <h3>Karthik Prudhivi</h3>
+                    <a href="https://github.com/karthik961" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/prudhivi-karthik-41a09127a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:prudhivikarthik@gmail.com" class="card-email"> <i class="fas fa-envelope"></i> </a>
+                </div>
+                <div class="card">
+                    <img src="{{ url_for('static', filename='user.png') }}" alt="Developer4">
+                    <h3>Sai Srimanth Joshi</h3>
+                    <a href="https://github.com/srimanth1234" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srimanth-joshi-085643271" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:srimanthjoshi123@gmail.com" class="card-email"> <i class="fas fa-envelope"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function logout() {
+            window.location.href = "{{ url_for('logout') }}";
+        }
+        
+    </script>
+</body>
+</html>
