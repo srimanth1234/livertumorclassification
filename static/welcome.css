@@ -1,0 +1,172 @@
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 10px; /* Remove default body margin */
+    padding: 10px; /* Remove default body padding */
+    
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: #333;
+    color: #fff;
+    z-index: 9999; /* Higher z-index to keep above other content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.navbar .left button {
+    background-color: transparent;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.navbar .right button{
+    background-color: transparent;
+    width: 80px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.navbar .right {
+    position: relative; /* Change to relative positioning */
+    padding-left:30px;
+}
+
+.navbar .right button:hover {
+    background-color: #c2302d;
+    padding: 10px 16px;
+}
+
+/* Content section styles */
+#content {
+    padding-top: 60px; /* Adjust this value according to the height of your navbar */
+}
+
+#home, #about, #uploads {
+    padding: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 10px; /* Add a common right margin */
+    margin-left: 15px;
+     
+}
+
+#home{
+    background-color: #eedada;
+    display: flex;
+    flex-direction: column; 
+    text-align: left; /* Change text-align to left */
+    padding: 0 40px 40px;
+    margin-top: 80px;
+}
+/*image of hemangioma*/
+.team-image {
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    align-self: flex-end;
+  }
+/*image of colangiocarcinoma*/
+.team-image2 {
+    width: 350px;
+    height: 300px;
+    margin-top: 30px;
+    align-self: flex-end;
+  }
+#uploads {
+    padding: 160px; /* Add padding to the upload section */
+    background-color: #eedada; /* Use the same background color as the about section */
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin-top: 20px; 
+    border-radius: 0px;
+}
+#about {
+    background-color:  #eedada;
+    padding: 40px; /* Adjust padding for the about section */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; /* Align items at the start of the container */
+}
+
+.main {
+    margin-top: 80px; /* Add margin-top to adjust for navbar height */
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+.card {
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    flex-basis: calc(23% - 20px); /* Adjust flex-basis to set width of cards */
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 15px auto;
+}
+.card h3, .card p {
+    margin: 5px 0;
+}
+.h2{
+    text-align:center;
+}
+/* Hover effect on cards */
+.card:hover {
+    transform: translateY(-5px); /* Move the card up slightly on hover */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.uploaded-image {
+    max-width: 400px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+.upload-button:hover {
+    background-color: #2f96ce;
+}
+.alert-error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 10px;
+}
